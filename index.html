@@ -82,6 +82,19 @@
           console.error('Unable to open a new window with about:blank');
         }
       });
+      document.getElementById("PKMN_Rocket_Version").addEventListener("click", function () {
+        var newWindow = window.open('about:blank', '_blank');
+
+        if (newWindow) {
+          var iframe = document.createElement('iframe');
+          iframe.src = '/retro.html';
+          iframe.width = '100%';
+          iframe.height = '100%';
+          newWindow.document.body.appendChild(iframe);
+        } else {
+          console.error('Unable to open a new window with about:blank');
+        }
+      });
     </script>
   </div>
 </body>
