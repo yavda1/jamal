@@ -68,7 +68,7 @@
           document.getElementById('display').value = 'Error';
         }
       }
-
+      
       document.getElementById("PKMN_Gaia_Version").addEventListener("click", function () {
         var newWindow = window.open('about:blank', '_blank');
 
@@ -78,6 +78,8 @@
           iframe.width = '100%';
           iframe.height = '100%';
           newWindow.document.body.appendChild(iframe);
+          window.close();
+
         } else {
           console.error('Unable to open a new window with about:blank');
         }
@@ -91,6 +93,7 @@
           iframe.width = '100%';
           iframe.height = '100%';
           newWindow.document.body.appendChild(iframe);
+          window.close();
         } else {
           console.error('Unable to open a new window with about:blank');
         }
